@@ -118,16 +118,3 @@ This session provides a practical deep-dive into Bitcoin mining from the comfort
   - Methods: immersion cooling, attic exhaust setups, reusing miner heat in winter  
   - Practical demonstration of immersion oil bath and exhaust techniques  
 
----
-
-## Daily Learning Outcomes  
-
-1. **Self-custody Confidence:**  
-   Gain deep practical knowledge to securely store, back up, and recover Bitcoin using air-gapped wallets and multisig setups.
-
-2. **Network Sovereignty:**  
-   Learn to confidently deploy, manage, and secure your own Bitcoin and Lightning Network nodes for maximum independence and financial control.
-
-3. **Mining Literacy:**  
-   Develop the skills to effectively build, manage, and optimize a home Bitcoin mining operation, understanding the hardware, software, and economic factors that drive profitability.
-
