@@ -120,7 +120,7 @@ This session provides a practical deep-dive into Bitcoin mining from the comfort
 
 ---
 
-### Daily Learning Outcomes  
+## Daily Learning Outcomes  
 
 1. **Self-custody Confidence:**  
    Gain deep practical knowledge to securely store, back up, and recover Bitcoin using air-gapped wallets and multisig setups.
