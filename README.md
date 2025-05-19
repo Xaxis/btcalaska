@@ -1,10 +1,10 @@
 # Bitcoin Alaska Conference — Education Sessions
 
-| Time (AKDT) | Session Title | Description |
-|-------------|---------------|-------------|
-| **09 : 00 – 10 : 30** | [**Session 1: Cold-Storage Mastery: Air-Gapped Wallets & Multisig Fundamentals**](#session-1-cold-storage-mastery-air-gapped-wallets--multisig-fundamentals) | • Air-gapped wallets & multisig security<br>• Generating secure seeds & passphrases<br>• Robust backup & recovery strategies |
-| **11 : 00 – 12 : 30** | [**Session 2: Run Your Own Node: Raspberry Pi 5 + Lightning Hub in 90 Minutes**](#session-2-run-your-own-node-raspberry-pi-5--lightning-hub-in-90-minutes) | • Building & configuring Bitcoin nodes<br>• Lightning Network channel setup<br>• Node security & remote management |
-| **14 : 00 – 15 : 30** | [**Session 3: Home Mining 101: Build & Hash with the Bitaxe Ultra (BM1366 ASIC)**](#session-3-home-mining-101-build--hash-with-the-bitaxe-ultra-bm1366-asic) | • DIY ASIC miner assembly & setup<br>• Mining pools & Stratum v2 basics<br>• Mining profitability & environmental optimization |
+| Session Title | Description |
+|---------------|-------------|
+| [**Session 1: Cold-Storage Mastery: Air-Gapped Wallets & Multisig Fundamentals**](#session-1-cold-storage-mastery-air-gapped-wallets--multisig-fundamentals) | • Air-gapped wallets & multisig security<br>• Generating secure seeds & passphrases<br>• Robust backup & recovery strategies |
+| [**Session 2: Run Your Own Node: Raspberry Pi 5 + Lightning Hub in 90 Minutes**](#session-2-run-your-own-node-raspberry-pi-5--lightning-hub-in-90-minutes) | • Building & configuring Bitcoin nodes<br>• Lightning Network channel setup<br>• Node security & remote management |
+| [**Session 3: Home Mining 101: Build & Hash with the Bitaxe Ultra (BM1366 ASIC)**](#session-3-home-mining-101-build--hash-with-the-bitaxe-ultra-bm1366-asic) | • DIY ASIC miner assembly & setup<br>• Mining pools & Stratum v2 basics<br>• Mining profitability & environmental optimization |
 
 ---
 
