@@ -695,7 +695,7 @@ function loadSlides() {
         let titleElement = '';
         if (slide.title) {
             if (slide.title.includes('Bitcoin Alaska')) {
-                titleElement = `<h1>${slide.title} <img src="assets/bitcoin-logo.png" alt="Bitcoin Logo" class="bitcoin-logo logo-title"></h1>`;
+                titleElement = `<h1>${slide.title}</h1>`;
             } else {
                 titleElement = `<h2>${slide.title}</h2>`;
             }
