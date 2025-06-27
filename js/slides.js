@@ -122,7 +122,6 @@ const slideData = [
             <p>This wasn't random. While governments were bailing out the banks that caused the 2008 financial crisis, Satoshi was building an alternative system where bailouts are impossible.</p>
 
             <div class="highlight-box">
-                <img src="assets/bitcoin-logo.png" alt="Bitcoin Logo" class="bitcoin-logo" style="float: left; margin-right: 15px; margin-bottom: 10px;">
                 <p class="bitcoin-orange"><strong>Core Principles:</strong> Decentralization, Immutability, Transparency, Permissionless operation, and Trustless verification through cryptographic proof rather than institutional trust.</p>
             </div>
         `
@@ -145,7 +144,6 @@ const slideData = [
             <p>Each Bitcoin can be divided into 100 million smaller units called satoshis. If Bitcoin reaches $1 million per coin, one satoshi would be worth $0.01 (one cent). This ensures Bitcoin can function as money regardless of its price.</p>
 
             <div class="highlight-box">
-                <img src="assets/bitcoin-logo.png" alt="Bitcoin Logo" class="bitcoin-logo" style="float: right; margin-left: 15px; margin-bottom: 10px;">
                 <p class="bitcoin-orange"><strong>Why Bitcoin is Superior to Gold:</strong> Verification (instant with software), Divisibility (perfect digital division), Portability (travels at light speed), Storage (can be memorized), and Absolute Scarcity (mathematically fixed supply).</p>
             </div>
         `
@@ -432,7 +430,6 @@ const slideData = [
             <strong>Email:</strong> info@bitcoinalaska.org</p>
 
             <div class="highlight-box" style="text-align: center;">
-                <img src="assets/bitcoin-logo.png" alt="Bitcoin Logo" class="bitcoin-logo" style="margin-bottom: 15px;">
                 <p class="bitcoin-orange"><strong>Final Thought:</strong> Bitcoin represents more than money - it's a tool for human freedom and prosperity. In Alaska, with our values of self-reliance and independence, Bitcoin feels like a natural fit. Welcome to your financial sovereignty. Welcome to the future of money.</p>
             </div>
         `
@@ -766,10 +763,31 @@ function loadSlides() {
 }
 
 // Load slides when DOM is ready
-document.addEventListener('DOMContentLoaded', function() {
-    loadSlides();
-    
-    // Update total slides count
-    const totalSlides = slideData.length;
-    document.getElementById('total-slides').textContent = totalSlides;
-});
+function initializeSlides() {
+    try {
+        loadSlides();
+
+        // Update total slides count
+        const totalSlides = slideData.length;
+        const totalSlidesElement = document.getElementById('total-slides');
+        if (totalSlidesElement) {
+            totalSlidesElement.textContent = totalSlides;
+        }
+
+        // Dispatch custom event to signal slides are ready
+        const slidesReadyEvent = new CustomEvent('slidesReady');
+        document.dispatchEvent(slidesReadyEvent);
+
+    } catch (error) {
+        console.error('Error initializing slides:', error);
+        // Retry after a short delay
+        setTimeout(initializeSlides, 100);
+    }
+}
+
+// Ensure DOM is fully loaded before proceeding
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initializeSlides);
+} else {
+    initializeSlides();
+}

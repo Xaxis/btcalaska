@@ -7,8 +7,24 @@ let totalSlides = 0;
 function initPresentation() {
     slides = document.querySelectorAll('.slide');
     totalSlides = slides.length;
+
+    // Ensure first slide is visible
+    if (slides.length > 0) {
+        // Hide all slides first
+        slides.forEach(slide => slide.classList.remove('active'));
+        // Show first slide
+        slides[0].classList.add('active');
+        currentSlide = 0;
+    }
+
     updateNavigation();
     updateProgressBar();
+
+    // Update slide counter
+    const currentSlideElement = document.getElementById('current-slide');
+    if (currentSlideElement) {
+        currentSlideElement.textContent = currentSlide + 1;
+    }
 }
 
 // Navigation functions
@@ -200,26 +216,40 @@ function exportSlides() {
     URL.revokeObjectURL(url);
 }
 
-// Initialize when DOM is loaded
-document.addEventListener('DOMContentLoaded', function() {
-    // Wait a bit for slides to be loaded
-    setTimeout(() => {
-        initPresentation();
-        restorePosition();
-        
-        // Set up event listeners
+// Initialize when everything is ready
+function setupPresentation() {
+    initPresentation();
+    restorePosition();
+
+    // Set up event listeners (only once)
+    if (!window.presentationInitialized) {
         document.addEventListener('keydown', handleKeyPress);
         document.addEventListener('touchstart', handleTouchStart);
         document.addEventListener('touchend', handleTouchEnd);
         window.addEventListener('hashchange', handleHashChange);
-        
-        // Handle initial hash
-        handleHashChange();
-        
+
         // Auto-save position periodically
         setInterval(savePosition, 5000);
-        
-    }, 100);
+
+        window.presentationInitialized = true;
+    }
+
+    // Handle initial hash
+    handleHashChange();
+}
+
+// Listen for slides ready event
+document.addEventListener('slidesReady', setupPresentation);
+
+// Fallback initialization
+document.addEventListener('DOMContentLoaded', function() {
+    // Wait a bit for slides to load
+    setTimeout(() => {
+        const slides = document.querySelectorAll('.slide');
+        if (slides.length > 0 && !window.presentationInitialized) {
+            setupPresentation();
+        }
+    }, 300);
 });
 
 // Handle page unload
