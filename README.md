@@ -7,7 +7,7 @@
 
 ## 🎯 Live Presentation
 
-**View the presentation:** [https://yourusername.github.io/btcalaska-edu-sessions/](https://yourusername.github.io/btcalaska-edu-sessions/)
+**View the presentation:** [https://xaxis.github.io/btcalaska/](https://xaxis.github.io/btcalaska/)
 
 ## 📋 Session Overview
 
