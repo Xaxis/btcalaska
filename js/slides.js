@@ -477,6 +477,8 @@ const slideData = [
                 <strong>30-Day Bitcoin Basics:</strong> Week 1: "The Bitcoin Standard", Week 2: Podcasts, Week 3: First wallet setup, Week 4: Join communities<br>
                 <strong>90-Day Technical:</strong> Month 1: "Mastering Bitcoin", Month 2: Node setup, Month 3: Advanced topics<br>
                 <strong>1-Year Expert:</strong> Foundation → Technical skills → Specialization → Community contribution</p>
+
+
             </div>
         `
     },
@@ -586,6 +588,8 @@ const slideData = [
 
             <div class="highlight-box">
                 <p class="bitcoin-orange"><strong>Alaska Security Advantages:</strong> Permafrost provides stable buried caches, remote cabins offer natural off-site storage, harsh environment deters criminals, and self-reliance culture understands redundancy importance.</p>
+
+
             </div>
         `
     },
@@ -649,6 +653,8 @@ const slideData = [
 
             <div class="highlight-box">
                 <p class="gold"><strong>Alaska's Unique Position:</strong> Abundant renewable energy + business-friendly environment + culture of innovation + climate advantages = Potential to become the Bitcoin capital of North America</p>
+
+
             </div>
         `
     },
@@ -714,6 +720,8 @@ const slideData = [
 
             <div class="highlight-box">
                 <p class="bitcoin-orange"><strong>Alaska Development Opportunities:</strong> Cold weather testing, satellite internet optimization, renewable energy integration, and remote connectivity improvements for Bitcoin Core.</p>
+
+
             </div>
         `
     }
