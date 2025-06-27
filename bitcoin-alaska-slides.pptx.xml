@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<presentation xmlns="http://schemas.openxmlformats.org/presentationml/2006/main">
+  <sldMaster>
+    <cSld>
+      <spTree>
+        <nvGrpSpPr>
+          <cNvPr id="1" name=""/>
+          <cNvGrpSpPr/>
+          <nvPr/>
+        </nvGrpSpPr>
+        <grpSpPr>
+          <a:xfrm xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main">
+            <a:off x="0" y="0"/>
+            <a:ext cx="9144000" cy="6858000"/>
+            <a:chOff x="0" y="0"/>
+            <a:chExt cx="9144000" cy="6858000"/>
+          </a:xfrm>
+        </grpSpPr>
+      </spTree>
+    </cSld>
+  </sldMaster>
+  
+  <!-- Slide 1: Title -->
+  <sld>
+    <cSld>
+      <spTree>
+        <sp>
+          <nvSpPr>
+            <cNvPr id="2" name="Title"/>
+            <cNvSpPr>
+              <spLocks noGrp="1"/>
+            </cNvSpPr>
+            <nvPr>
+              <ph type="ctrTitle"/>
+            </nvPr>
+          </nvSpPr>
+          <spPr/>
+          <txBody>
+            <a:bodyPr xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main"/>
+            <a:lstStyle xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main"/>
+            <a:p xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main">
+              <a:r>
+                <a:rPr lang="en-US" sz="4400" b="1">
+                  <a:solidFill>
+                    <a:srgbClr val="F7931A"/>
+                  </a:solidFill>
+                </a:rPr>
+                <a:t>Bitcoin Alaska</a:t>
+              </a:r>
+            </a:p>
+            <a:p xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main">
+              <a:r>
+                <a:rPr lang="en-US" sz="2400">
+                  <a:solidFill>
+                    <a:srgbClr val="FFD700"/>
+                  </a:solidFill>
+                </a:rPr>
+                <a:t>Open Forum &amp; Education Sessions</a:t>
+              </a:r>
+            </a:p>
+          </txBody>
+        </sp>
+        
+        <sp>
+          <nvSpPr>
+            <cNvPr id="3" name="Content"/>
+            <cNvSpPr>
+              <spLocks noGrp="1"/>
+            </cNvSpPr>
+            <nvPr>
+              <ph type="body"/>
+            </nvPr>
+          </nvSpPr>
+          <spPr/>
+          <txBody>
+            <a:bodyPr xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main"/>
+            <a:lstStyle xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main"/>
+            <a:p xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main">
+              <a:r>
+                <a:rPr lang="en-US" sz="1800" b="1">
+                  <a:solidFill>
+                    <a:srgbClr val="F7931A"/>
+                  </a:solidFill>
+                </a:rPr>
+                <a:t>Community-Driven Learning</a:t>
+              </a:r>
+            </a:p>
+            <a:p xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main">
+              <a:r>
+                <a:rPr lang="en-US" sz="1400">
+                  <a:solidFill>
+                    <a:srgbClr val="FFFFFF"/>
+                  </a:solidFill>
+                </a:rPr>
+                <a:t>Welcome to a new format for Bitcoin education in Alaska. Instead of rigid presentations, we're creating an interactive space where your curiosity shapes our conversation.</a:t>
+              </a:r>
+            </a:p>
+          </txBody>
+        </sp>
+      </spTree>
+    </cSld>
+  </sld>
+</presentation>

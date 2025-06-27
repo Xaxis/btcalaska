@@ -1,0 +1,82 @@
+# GitHub Pages configuration for Bitcoin Alaska Education Sessions
+
+# Site settings
+title: "Bitcoin Alaska: Open Forum & Education Sessions"
+description: "Interactive Bitcoin education sessions for Alaska - covering philosophy, technical skills, and Alaska-specific opportunities"
+url: "https://yourusername.github.io"
+baseurl: "/btcalaska-edu-sessions"
+
+# Author information
+author:
+  name: "Bitcoin Alaska"
+  email: "info@bitcoinalaska.org"
+  twitter: "BitcoinAlaska"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+theme: minima
+
+# GitHub Pages settings
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Exclude files from processing
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .sass-cache
+  - .jekyll-cache
+  - gemfiles
+  - slide-*.md
+  - bitcoin-alaska-slides.html
+  - bitcoin-alaska-presentation.html
+
+# Include files
+include:
+  - _pages
+
+# Collections
+collections:
+  slides:
+    output: false
+
+# Default front matter
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
+# SEO settings
+twitter:
+  username: BitcoinAlaska
+  card: summary_large_image
+
+facebook:
+  app_id: 
+  publisher: 
+
+social:
+  name: Bitcoin Alaska
+  links:
+    - https://twitter.com/BitcoinAlaska
+    - https://github.com/yourusername/btcalaska-edu-sessions
+
+# Google Analytics (optional)
+# google_analytics: UA-XXXXXXXX-X
+
+# Disqus comments (optional)
+# disqus:
+#   shortname: bitcoin-alaska

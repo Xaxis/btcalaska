@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitcoin Alaska: Open Forum & Education Sessions</title>
+    <meta name="description" content="Interactive Bitcoin education sessions for Alaska - covering philosophy, technical skills, and Alaska-specific opportunities">
+    <meta name="keywords" content="Bitcoin, Alaska, education, cryptocurrency, mining, cold storage, Lightning Network">
+    <meta name="author" content="Bitcoin Alaska">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourusername.github.io/btcalaska-edu-sessions/">
+    <meta property="og:title" content="Bitcoin Alaska: Open Forum & Education Sessions">
+    <meta property="og:description" content="Interactive Bitcoin education sessions for Alaska - covering philosophy, technical skills, and Alaska-specific opportunities">
+    <meta property="og:image" content="https://yourusername.github.io/btcalaska-edu-sessions/assets/bitcoin-alaska-og.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://yourusername.github.io/btcalaska-edu-sessions/">
+    <meta property="twitter:title" content="Bitcoin Alaska: Open Forum & Education Sessions">
+    <meta property="twitter:description" content="Interactive Bitcoin education sessions for Alaska - covering philosophy, technical skills, and Alaska-specific opportunities">
+    <meta property="twitter:image" content="https://yourusername.github.io/btcalaska-edu-sessions/assets/bitcoin-alaska-og.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+    
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            color: #ffffff;
+            overflow: hidden;
+        }
+        
+        .slide {
+            width: 100vw;
+            height: 100vh;
+            display: none;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            text-align: left;
+            padding: 40px;
+            box-sizing: border-box;
+            position: relative;
+            overflow-y: auto;
+        }
+        
+        .slide.active {
+            display: flex;
+        }
+        
+        .slide h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: #F7931A;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            text-align: center;
+            width: 100%;
+        }
+        
+        .slide h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #F7931A;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            text-align: center;
+            width: 100%;
+        }
+        
+        .slide h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #FFD700;
+        }
+        
+        .slide p, .slide li {
+            font-size: 1.1rem;
+            line-height: 1.5;
+            margin-bottom: 12px;
+            max-width: 1000px;
+        }
+        
+        .slide ul {
+            max-width: 1000px;
+            margin-bottom: 20px;
+        }
+        
+        .slide li {
+            margin-bottom: 8px;
+            padding-left: 5px;
+        }
+        
+        .content-container {
+            max-width: 1000px;
+            width: 100%;
+        }
+        
+        .bitcoin-orange {
+            color: #F7931A;
+            font-weight: bold;
+        }
+        
+        .gold {
+            color: #FFD700;
+            font-weight: bold;
+        }
+        
+        .navigation {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+        
+        .nav-btn {
+            background: #F7931A;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 0 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background 0.3s ease;
+        }
+        
+        .nav-btn:hover {
+            background: #e8851e;
+        }
+        
+        .nav-btn:disabled {
+            background: #666;
+            cursor: not-allowed;
+        }
+        
+        .slide-counter {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background: rgba(0,0,0,0.7);
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-size: 14px;
+            z-index: 1000;
+        }
+        
+        .subtitle {
+            font-size: 1.5rem;
+            color: #cccccc;
+            margin-bottom: 30px;
+            font-style: italic;
+            text-align: center;
+            width: 100%;
+        }
+        
+        .highlight-box {
+            background: rgba(247, 147, 26, 0.1);
+            border: 2px solid #F7931A;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            max-width: 1000px;
+        }
+        
+        .philosophy-theme {
+            background: linear-gradient(135deg, #2c1810 0%, #4a2c1a 50%, #6b3e24 100%);
+        }
+        
+        .alaska-theme {
+            background: linear-gradient(135deg, #0f3460 0%, #16537e 50%, #1e6091 100%);
+        }
+        
+        .quote {
+            font-style: italic;
+            font-size: 1.2rem;
+            color: #FFD700;
+            text-align: center;
+            margin: 20px 0;
+            padding: 15px;
+            border-left: 4px solid #F7931A;
+        }
+
+        .appendix-theme {
+            background: linear-gradient(135deg, #1a2332 0%, #2d3748 50%, #4a5568 100%);
+            border-top: 3px solid #F7931A;
+        }
+
+        .appendix-theme h2::before {
+            content: "📚 ";
+            font-size: 0.8em;
+        }
+
+        .slide h4 {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            color: #FFD700;
+            margin-top: 15px;
+        }
+
+        .bitcoin-logo {
+            width: 160px;
+            height: 80px;
+            opacity: 0.5;
+            transition: opacity 0.3s ease;
+        }
+
+        .bitcoin-logo:hover {
+            opacity: 1;
+        }
+
+        .logo-corner {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 100;
+        }
+
+        .logo-title {
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: 15px;
+            width: 40px;
+            height: 40px;
+        }
+
+        .logo-watermark {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            width: 30px;
+            height: 30px;
+            opacity: 0.3;
+            z-index: 50;
+        }
+
+        .title-slide .bitcoin-logo {
+            width: 80px;
+            height: 80px;
+        }
+
+        .appendix-theme .bitcoin-logo {
+            filter: brightness(0.9);
+        }
+        
+        .fullscreen-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: rgba(247, 147, 26, 0.8);
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            z-index: 1000;
+        }
+        
+        .fullscreen-btn:hover {
+            background: rgba(247, 147, 26, 1);
+        }
+        
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 4px;
+            background: #F7931A;
+            transition: width 0.3s ease;
+            z-index: 1000;
+        }
+        
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .slide {
+                padding: 20px;
+            }
+
+            .slide h1 {
+                font-size: 2.5rem;
+            }
+
+            .slide h2 {
+                font-size: 2rem;
+            }
+
+            .slide h3 {
+                font-size: 1.5rem;
+            }
+
+            .slide p, .slide li {
+                font-size: 1rem;
+            }
+
+            .navigation {
+                bottom: 10px;
+                right: 10px;
+            }
+
+            .nav-btn {
+                padding: 8px 16px;
+                font-size: 14px;
+            }
+
+            .logo-corner {
+                top: 10px;
+                left: 10px;
+            }
+
+            .bitcoin-logo {
+                width: 40px;
+                height: 40px;
+            }
+
+            .title-slide .bitcoin-logo {
+                width: 60px;
+                height: 60px;
+            }
+
+            .logo-title {
+                width: 30px;
+                height: 30px;
+                margin-left: 10px;
+            }
+        }
+        
+        /* Print styles */
+        @media print {
+            .slide {
+                display: block !important;
+                page-break-after: always;
+                height: auto;
+                overflow: visible;
+            }
+            
+            .navigation, .slide-counter, .fullscreen-btn, .progress-bar {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="progress-bar" id="progressBar"></div>
+<button class="fullscreen-btn" onclick="toggleFullscreen()" title="Toggle Fullscreen">⛶</button>
+
+<!-- Slide 1: Title -->
+<div class="slide active title-slide">
+    <h1>Bitcoin Alaska <img src="assets/bitcoin-logo.png" alt="Bitcoin Logo" class="bitcoin-logo logo-title"></h1>
+    <p class="subtitle">Open Forum & Education Sessions</p>
+    <div class="content-container">
+        <h3 class="bitcoin-orange">Community-Driven Learning</h3>
+        <p>Welcome to a new format for Bitcoin education in Alaska. Instead of rigid presentations, we're creating an interactive space where your curiosity shapes our conversation. Whether you're completely new to Bitcoin or a seasoned hodler, this forum is designed to meet you where you are and take you where you want to go.</p>
+        
+        <h3 class="gold">What Makes This Different</h3>
+        <ul>
+            <li><strong>No Stupid Questions:</strong> Every question, no matter how basic, helps someone else learn</li>
+            <li><strong>Real Hardware:</strong> We have actual devices to demonstrate concepts hands-on</li>
+            <li><strong>Alaska Focus:</strong> Tailored specifically for our unique environment and opportunities</li>
+            <li><strong>Community Building:</strong> Building lasting connections in the Alaska Bitcoin community</li>
+        </ul>
+    </div>
+    <p style="margin-top: 40px; font-size: 1.2rem; color: #F7931A; text-align: center; width: 100%;">Bitcoin Conference 2024 • Alaska</p>
+    <img src="assets/bitcoin-logo.png" alt="Bitcoin Logo" class="bitcoin-logo logo-watermark">
+</div>
+
+<!-- Additional slides will be loaded from slides.js -->
+
+<div class="navigation">
+    <button class="nav-btn" onclick="previousSlide()" id="prevBtn">Previous</button>
+    <button class="nav-btn" onclick="nextSlide()" id="nextBtn">Next</button>
+</div>
+
+<div class="slide-counter">
+    <span id="current-slide">1</span> / <span id="total-slides">22</span>
+</div>
+
+<script src="js/slides.js"></script>
+<script src="js/presentation.js"></script>
+
+</body>
+</html>

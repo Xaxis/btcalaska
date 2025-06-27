@@ -1,120 +1,212 @@
-# Bitcoin Alaska Conference — Education Sessions
+# Bitcoin Alaska: Open Forum & Education Sessions
 
-| Session Title | Description |
-|---------------|-------------|
-| [**Session 1: Cold-Storage Mastery: Air-Gapped Wallets & Multisig Fundamentals**](#session-1-cold-storage-mastery-air-gapped-wallets--multisig-fundamentals) | • Air-gapped wallets & multisig security<br>• Generating secure seeds & passphrases<br>• Robust backup & recovery strategies |
-| [**Session 2: Run Your Own Node: Raspberry Pi 5 + Lightning Hub in 90 Minutes**](#session-2-run-your-own-node-raspberry-pi-5--lightning-hub-in-90-minutes) | • Building & configuring Bitcoin nodes<br>• Lightning Network channel setup<br>• Node security & remote management |
-| [**Session 3: Home Mining 101: Build & Hash with the Bitaxe Ultra (BM1366 ASIC)**](#session-3-home-mining-101-build--hash-with-the-bitaxe-ultra-bm1366-asic) | • DIY ASIC miner assembly & setup<br>• Mining pools & Stratum v2 basics<br>• Mining profitability & environmental optimization |
+[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live-brightgreen)](https://yourusername.github.io/btcalaska-edu-sessions/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+**Interactive Bitcoin education presentation for Alaska** - covering philosophy, technical skills, and Alaska-specific opportunities.
+
+## 🎯 Live Presentation
+
+**View the presentation:** [https://yourusername.github.io/btcalaska-edu-sessions/](https://yourusername.github.io/btcalaska-edu-sessions/)
+
+## 📋 Session Overview
+
+**Format Update:** We've transformed our structured sessions into a relaxed, community-driven open Q&A forum and workgroup. Come with your questions, curiosity, and desire to learn together!
+
+### Key Features
+- **Open Forum Format:** Interactive Q&A and hands-on demonstrations
+- **Philosophy Focus:** Deep dive into the philosophy of money and Bitcoin's role as sound money
+- **Technical Topics:** Cold storage, node operation, mining, Lightning Network, and more
+- **Community Learning:** Your questions drive our discussion
+- **Alaska-Specific:** Tailored for Alaska's unique environment and opportunities
+
+## 🎮 Presentation Controls
+
+### Navigation
+- **Arrow Keys:** Previous/Next slide
+- **Spacebar:** Next slide
+- **Home/End:** First/Last slide
+- **F or F11:** Toggle fullscreen
+- **Escape:** Exit fullscreen
+
+### Mobile Support
+- **Swipe left:** Next slide
+- **Swipe right:** Previous slide
+- **Touch controls:** Navigation buttons
+
+### Features
+- **Progress bar:** Visual progress indicator
+- **Auto-save:** Remembers your position
+- **URL navigation:** Direct links to specific slides
+- **Print support:** Print all slides
+- **Responsive design:** Works on all devices
+
+## 📚 Content Overview
+
+| Topic Category | Content |
+|----------------|---------|
+| [**Philosophy of Money & Bitcoin**](#philosophy) | Sound money principles, Austrian economics, individual sovereignty |
+| [**Cold Storage & Security**](#security) | Air-gapped wallets, multisig security, Alaska-specific threat modeling |
+| [**Node Operation**](#nodes) | Raspberry Pi Bitcoin nodes, Lightning Network, privacy & sovereignty |
+| [**Home Mining**](#mining) | Bitaxe Ultra ASIC mining, renewable energy advantages, heat recovery |
+
+## 🚀 Getting Started
+
+### For Presenters
+1. **Fork this repository**
+2. **Update `_config.yml`** with your GitHub username and repository name
+3. **Enable GitHub Pages** in repository settings
+4. **Customize content** in `js/slides.js` if needed
+5. **Present!** Share the GitHub Pages URL
+
+### For Developers
+```bash
+# Clone the repository
+git clone https://github.com/yourusername/btcalaska-edu-sessions.git
+cd btcalaska-edu-sessions
+
+# Serve locally (optional)
+python -m http.server 8000
+# or
+npx serve .
+
+# Open in browser
+open http://localhost:8000
+```
+
+## 📁 Project Structure
+
+```
+btcalaska-edu-sessions/
+├── index.html              # Main presentation file
+├── js/
+│   ├── slides.js           # Slide content and data
+│   └── presentation.js     # Presentation logic and controls
+├── assets/                 # Images, icons, and media
+├── slide-*.md             # Individual slide content (markdown)
+├── _config.yml            # GitHub Pages configuration
+└── README.md              # This file
+```
+
+## 🎨 Customization
+
+### Adding New Slides
+Edit `js/slides.js` and add new slide objects:
+
+```javascript
+{
+    id: 18,
+    title: "Your New Slide",
+    subtitle: "Optional subtitle",
+    theme: "philosophy-theme", // or "alaska-theme" or ""
+    content: `
+        <h3 class="bitcoin-orange">Your Content</h3>
+        <p>Your slide content here...</p>
+    `
+}
+```
+
+### Styling
+- **Bitcoin Orange:** `#F7931A`
+- **Gold:** `#FFD700`
+- **Themes:** `philosophy-theme`, `alaska-theme`
+- **CSS:** Modify styles in `index.html` `<style>` section
+
+### Configuration
+Update `_config.yml` with your:
+- GitHub username
+- Repository name
+- Contact information
+- Social media links
+
+## 📖 Content Overview (22 Slides)
+
+### Main Presentation (Slides 1-17)
+1. **Title & Introduction** - Community-driven learning approach
+2. **Format Change** - Why open forum works better
+3. **Session Overview** - Philosophy and technical tracks
+4. **What is Money?** - Complete history and evolution
+5. **Fiat Problems** - Detailed analysis of current system
+6. **Bitcoin's Foundation** - Satoshi's vision and principles
+7. **Sound Money** - Bitcoin's perfection of money properties
+8. **Individual Sovereignty** - Self-custody and financial freedom
+9. **Austrian Economics** - Economic theory behind Bitcoin
+10. **Alaska Perspective** - Unique advantages and alignment
+11. **Technical Overview** - Hands-on skills introduction
+12. **Cold Storage** - Security for Alaska's environment
+13. **Node Operation** - Running your own Bitcoin node
+14. **Alaska Mining** - Energy abundance and mining opportunities
+15. **Open Forum** - How the interactive session works
+16. **Key Takeaways** - Essential principles to remember
+17. **Thank You** - Community building and next steps
+
+### Detailed Appendices (Slides 18-22)
+18. **Appendix A: Essential Resources** - Comprehensive reading list, podcasts, learning schedules
+19. **Appendix B: Hardware Guide** - Detailed specs for wallets, nodes, mining equipment
+20. **Appendix C: Security Protocols** - Advanced security frameworks for Alaska
+21. **Appendix D: Alaska Opportunities** - Economic analysis and business development
+22. **Appendix E: Technical Deep Dive** - Bitcoin protocol, Lightning Network, development
+
+### Content Topics
+
+### Philosophy
+- **What is Money?** Historical evolution and properties of sound money
+- **Fiat Currency Problems:** Inflation, central bank control, currency failures
+- **Bitcoin's Foundation:** Satoshi's vision, decentralization, cryptographic proof
+- **Austrian Economics:** Sound money theory, time preference, Cantillon effect
+- **Individual Sovereignty:** Financial freedom, privacy, censorship resistance
+- **Alaska Perspective:** Self-reliance, energy abundance, financial independence
+
+### Technical
+- **Cold Storage & Security:** Hardware wallets, multisig, backup strategies
+- **Node Operation:** Raspberry Pi setup, Lightning Network, privacy
+- **Home Mining:** Bitaxe Ultra, renewable energy, heat recovery
+- **Lightning Network:** Instant payments, channel management, LNURL
+
+### Alaska-Specific
+- **Energy Advantages:** Renewable resources, stranded energy monetization
+- **Climate Benefits:** Natural cooling, heat recovery systems
+- **Cultural Alignment:** Self-reliance values, community cooperation
+- **Economic Opportunities:** Mining, tourism, financial services
+
+## 🤝 Contributing
+
+1. **Fork the repository**
+2. **Create a feature branch** (`git checkout -b feature/amazing-feature`)
+3. **Commit your changes** (`git commit -m 'Add amazing feature'`)
+4. **Push to the branch** (`git push origin feature/amazing-feature`)
+5. **Open a Pull Request**
+
+### Content Contributions
+- Improve existing slide content
+- Add new slides or topics
+- Enhance Alaska-specific information
+- Update technical details
+
+### Technical Contributions
+- Improve presentation functionality
+- Add new features (timer, notes, etc.)
+- Enhance mobile experience
+- Optimize performance
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 📞 Contact
+
+- **Website:** [bitcoinalaska.org](https://bitcoinalaska.org)
+- **Email:** info@bitcoinalaska.org
+- **Twitter:** [@BitcoinAlaska](https://twitter.com/BitcoinAlaska)
+- **Telegram:** @BitcoinAlaska
+
+## 🙏 Acknowledgments
+
+- **Satoshi Nakamoto** - For creating Bitcoin
+- **Bitcoin Community** - For continuous education and development
+- **Alaska Bitcoin Community** - For local support and collaboration
+- **Open Source Contributors** - For tools and inspiration
 
 ---
 
-## Session 1: Cold-Storage Mastery: Air-Gapped Wallets & Multisig Fundamentals  
-**Time:** 09:00 – 10:30 AKDT  
-
-**Session Introduction:**  
-In this session, you'll master the essentials of securing your Bitcoin holdings using air-gapped hardware wallets and multisignature setups. You'll learn practical threat-modeling tailored specifically to the unique challenges of Alaska, discover how to generate truly secure cryptographic seeds, validate hardware wallet authenticity, and confidently build robust, redundant backup solutions to protect your assets in the harshest conditions.
-
-**Detailed Lesson Plan:**  
-- **Threat-Modeling for Alaskan Realities (10 mins)**  
-  - Unique risks: extreme weather, remote living, physical security concerns  
-  - Developing realistic security plans based on lifestyle and environment  
-
-- **Creating True Entropy (10 mins, Hands-on)**  
-  - Dice rolls, camera noise (SeedSigner), and SeedPicker validations  
-  - Confirming high-quality randomness and mitigating entropy attacks  
-
-- **Verifying Firmware & Supply-Chain Provenance (15 mins, Hands-on)**  
-  - Coldcard Mk4, SeedSigner, Passport Batch 3 firmware integrity checks  
-  - Using GPG signatures and SHA-256 verification to detect tampering  
-
-- **Generating and Securing BIP-39 Seeds (15 mins, Hands-on)**  
-  - Step-by-step generation of seed phrases  
-  - Implementing BIP-39 passphrases ("13th word") and testing recovery processes  
-
-- **Air-Gap Signing: PSBT Protocols (15 mins, Hands-on)**  
-  - Secure offline transaction signing methods (QR codes, NFC, micro-SD)  
-  - Evaluating operational security trade-offs of different air-gap techniques  
-
-- **Multisig Vault Setup (15 mins, Hands-on)**  
-  - Constructing a secure 2-of-3 multisig wallet using Bitcoin Core and Sparrow  
-  - Creating watch-only wallets for secure balance monitoring  
-
-- **Backup & Recovery Strategies (10 mins, Discussion/Demo)**  
-  - Techniques: stainless-steel seed backups, Shamir’s Secret Sharing  
-  - Geographically separated storage strategies for disaster resilience  
-  - Rapid recovery drill: real-time restoration demo from seed phrases  
-
----
-
-## Session 2: Run Your Own Node: Raspberry Pi 5 + Lightning Hub in 90 Minutes  
-**Time:** 11:00 – 12:30 AKDT  
-
-**Session Introduction:**  
-This practical, hands-on session will guide you step-by-step in assembling, deploying, and managing your own Bitcoin full node using a Raspberry Pi 5. You’ll also learn how to set up a Lightning Network node to facilitate instant, low-cost Bitcoin payments. We’ll focus heavily on best practices for security, network privacy, and robust remote management, empowering you with full sovereignty over your Bitcoin interactions.
-
-**Detailed Lesson Plan:**  
-- **Node Hardware Preparation (15 mins, Hands-on)**  
-  - Selecting and assembling components: Pi 5, SSD storage, active cooling  
-  - Power options: PoE vs USB-C, battery-backed RTC setup  
-
-- **Installing OS & Validating Bitcoin Core (10 mins, Hands-on)**  
-  - Flashing 64-bit Debian and verifying Bitcoin Core binaries  
-  - Using GPG and SHA-256 hashes for integrity  
-
-- **Initial Block Download & Data Management (15 mins, Hands-on)**  
-  - Optimizing the initial sync process (full node vs pruned options)  
-  - Configuring external SSD mounts for performance and reliability  
-
-- **Privacy & Remote Access Configuration (10 mins, Hands-on)**  
-  - Setting up Tor hidden services for enhanced privacy  
-  - Optional clearnet reverse proxy setup with nginx for secure remote access  
-
-- **Installing the RaspiBolt Software Stack (15 mins, Hands-on)**  
-  - electrs (Electrum Server), Lightning-Terminal, LND, RTL dashboards setup  
-  - Understanding each software's role within the Bitcoin ecosystem  
-
-- **Lightning Network Channel Management (15 mins, Hands-on)**  
-  - Opening Lightning channels: Autopilot vs manual setup  
-  - Setting fee structures, liquidity management, and testing LNURL authentication  
-
-- **Node Hardening & Remote Management (10 mins, Hands-on)**  
-  - Implementing security best practices: ufw firewall, Fail2ban, watchdog  
-  - Remote management techniques using tmux, Tailscale, and WireGuard VPN  
-
----
-
-## Session 3: Home Mining 101: Build & Hash with the Bitaxe Ultra (BM1366 ASIC)  
-**Time:** 14:00 – 15:30 AKDT  
-
-**Session Introduction:**  
-This session provides a practical deep-dive into Bitcoin mining from the comfort of your home using the Bitaxe Ultra (BM1366 ASIC) hardware. You’ll assemble, configure, and operate your own miner, gaining a clear understanding of mining economics, the factors influencing profitability, and effective methods to manage noise and heat. Learn how Alaska’s unique renewable energy landscape can maximize your mining profitability and sustainability.
-
-**Detailed Lesson Plan:**  
-- **Introduction to Home Mining & Bitaxe Hardware (10 mins)**  
-  - Overview of Bitaxe open-source mining project and hardware  
-  - Advantages of mining Bitcoin in Alaska (renewable energy, low-cost power)  
-
-- **Hardware Assembly & Safety (15 mins, Hands-on)**  
-  - Detailed parts list: ASIC board, ESP-32, PSU, inline watt-meter  
-  - Safety practices for electrical handling, surge protection, and assembly  
-
-- **Firmware Flashing & Initial Setup (15 mins, Hands-on)**  
-  - Flashing ESP-32 controller with open-source mining firmware (ESP-Tool)  
-  - Configuration and initial boot-up checks  
-
-- **Connecting & Configuring Mining Pools (15 mins, Hands-on)**  
-  - Introduction to Stratum v2 protocol and mining pool selection  
-  - Setting worker credentials for pools (Ocean, ViaBTC, solo-ck pool)  
-
-- **Live Monitoring & Performance Tuning (15 mins, Hands-on)**  
-  - Dashboard overview: hashrate, temperature, fan control, error rates  
-  - Managing ASIC performance, identifying throttling, and optimization  
-
-- **Mining Economics & ROI Analysis (10 mins, Discussion)**  
-  - Deep dive into block subsidy, fees, difficulty adjustments  
-  - Financial modeling: impact of kWh price, hash price forecasts, Bitcoin halving cycles  
-
-- **Noise & Heat Mitigation Strategies (10 mins, Demo/Discussion)**  
-  - Methods: immersion cooling, attic exhaust setups, reusing miner heat in winter  
-  - Practical demonstration of immersion oil bath and exhaust techniques  
-
+**Built with ❤️ for the Alaska Bitcoin community**
