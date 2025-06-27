@@ -8,13 +8,17 @@ function initPresentation() {
     slides = document.querySelectorAll('.slide');
     totalSlides = slides.length;
 
+    // Force reset to slide 1
+    currentSlide = 0;
+
     // Ensure first slide is visible
     if (slides.length > 0) {
         // Hide all slides first
-        slides.forEach(slide => slide.classList.remove('active'));
-        // Show first slide
+        slides.forEach((slide, index) => {
+            slide.classList.remove('active');
+        });
+        // Show first slide explicitly
         slides[0].classList.add('active');
-        currentSlide = 0;
     }
 
     updateNavigation();
@@ -23,7 +27,7 @@ function initPresentation() {
     // Update slide counter
     const currentSlideElement = document.getElementById('current-slide');
     if (currentSlideElement) {
-        currentSlideElement.textContent = currentSlide + 1;
+        currentSlideElement.textContent = 1;
     }
 }
 
@@ -218,8 +222,13 @@ function exportSlides() {
 
 // Initialize when everything is ready
 function setupPresentation() {
+    // Force start at slide 1
+    currentSlide = 0;
+
     initPresentation();
-    restorePosition();
+
+    // Don't restore position on initial load - always start at slide 1
+    // restorePosition();
 
     // Set up event listeners (only once)
     if (!window.presentationInitialized) {
@@ -234,8 +243,8 @@ function setupPresentation() {
         window.presentationInitialized = true;
     }
 
-    // Handle initial hash
-    handleHashChange();
+    // Force show slide 1
+    showSlide(0);
 }
 
 // Listen for slides ready event

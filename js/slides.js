@@ -16,33 +16,11 @@ const slideData = [
                 <li><strong>Alaska Focus:</strong> Tailored specifically for our unique environment and opportunities</li>
                 <li><strong>Community Building:</strong> Building lasting connections in the Alaska Bitcoin community</li>
             </ul>
-            <p style="margin-top: 40px; font-size: 1.2rem; color: #F7931A; text-align: center; width: 100%;">Bitcoin Conference 2024 • Alaska</p>
+            <p style="margin-top: 40px; font-size: 1.2rem; color: #F7931A; text-align: center; width: 100%;">Bitcoin Alaska Conference • 2025</p>
         `
     },
     {
         id: 2,
-        title: "From Structured Sessions to Open Dialogue",
-        subtitle: "",
-        theme: "",
-        content: `
-            <h3 class="bitcoin-orange">Why We Changed Our Approach</h3>
-            <p>Originally, we planned three separate 90-minute technical workshops. But we realized something important: the best Bitcoin education happens through conversation, not lecture. The most valuable insights come from the questions you ask, the problems you're trying to solve, and the real-world scenarios you face living in Alaska.</p>
-            
-            <h3 class="gold">What This Means for You</h3>
-            <ul>
-                <li><strong>Interactive Q&A Format:</strong> Raise your hand, ask questions, challenge ideas. This is your session.</li>
-                <li><strong>Hands-On Demonstrations:</strong> We have hardware here - Coldcards, Raspberry Pis, mining equipment. Want to see how something works? We'll show you.</li>
-                <li><strong>No Prerequisites:</strong> Whether you've never heard of Bitcoin or you're running your own Lightning node, there's something here for you.</li>
-                <li><strong>Community Learning:</strong> The person next to you might have the exact answer you need. We're all teachers and students here.</li>
-            </ul>
-            
-            <div class="highlight-box">
-                <p class="bitcoin-orange"><strong>The Philosophy Behind This Change:</strong> Bitcoin itself is about removing intermediaries and empowering individuals. Our education should reflect that same philosophy. Instead of us talking at you, we're creating a space where knowledge flows freely in all directions.</p>
-            </div>
-        `
-    },
-    {
-        id: 3,
         title: "Today's Session Overview",
         subtitle: "",
         theme: "",
@@ -63,7 +41,7 @@ const slideData = [
         `
     },
     {
-        id: 4,
+        id: 3,
         title: "What is Money?",
         subtitle: "Understanding the Foundation of Economic Exchange",
         theme: "philosophy-theme",
@@ -83,7 +61,7 @@ const slideData = [
         `
     },
     {
-        id: 5,
+        id: 4,
         title: "The Fundamental Problems with Fiat Currency",
         subtitle: "Why Our Current Monetary System is Broken",
         theme: "philosophy-theme",
@@ -104,7 +82,7 @@ const slideData = [
         `
     },
     {
-        id: 6,
+        id: 5,
         title: "Bitcoin's Philosophical Foundation",
         subtitle: "The Revolutionary Ideas Behind Digital Sound Money",
         theme: "philosophy-theme",
@@ -127,7 +105,7 @@ const slideData = [
         `
     },
     {
-        id: 7,
+        id: 6,
         title: "Sound Money Principles",
         subtitle: "How Bitcoin Perfects the Properties of Money",
         theme: "philosophy-theme",
@@ -149,7 +127,7 @@ const slideData = [
         `
     },
     {
-        id: 8,
+        id: 7,
         title: "Individual Sovereignty",
         subtitle: "Be Your Own Bank: Taking Control of Your Financial Life",
         theme: "",
@@ -174,7 +152,7 @@ const slideData = [
         `
     },
     {
-        id: 9,
+        id: 8,
         title: "The Austrian School Connection",
         subtitle: "How Bitcoin Validates 150 Years of Economic Theory",
         theme: "philosophy-theme",
@@ -197,7 +175,7 @@ const slideData = [
         `
     },
     {
-        id: 10,
+        id: 9,
         title: "The Alaskan Perspective",
         subtitle: "Why Alaska is Uniquely Positioned for Bitcoin Adoption",
         theme: "alaska-theme",
@@ -228,7 +206,7 @@ const slideData = [
         `
     },
     {
-        id: 11,
+        id: 10,
         title: "Technical Topics: From Theory to Practice",
         subtitle: "Hands-On Bitcoin Skills for Alaskans",
         theme: "",
@@ -253,7 +231,7 @@ const slideData = [
         `
     },
     {
-        id: 12,
+        id: 11,
         title: "Cold Storage & Security",
         subtitle: "Protecting Your Bitcoin in Alaska's Extreme Environment",
         theme: "",
@@ -282,7 +260,7 @@ const slideData = [
         `
     },
     {
-        id: 13,
+        id: 12,
         title: "Running Your Own Bitcoin Node",
         subtitle: "Achieving True Financial Sovereignty Through Self-Verification",
         theme: "",
@@ -315,7 +293,7 @@ const slideData = [
         `
     },
     {
-        id: 14,
+        id: 13,
         title: "Home Mining in Alaska",
         subtitle: "Turning Energy Abundance into Digital Gold",
         theme: "alaska-theme",
@@ -347,37 +325,7 @@ const slideData = [
         `
     },
     {
-        id: 15,
-        title: "Open Forum: Your Questions Drive Our Discussion",
-        subtitle: "How This Interactive Session Works",
-        theme: "",
-        content: `
-            <h3 class="bitcoin-orange">The Philosophy Behind Open Learning</h3>
-            <p>Traditional education follows a one-size-fits-all approach. But Bitcoin education works best when it's interactive, practical, and tailored to your specific needs and interests.</p>
-
-            <h3 class="gold">How to Participate</h3>
-            <ul>
-                <li><strong>Raise Your Hand:</strong> Ask questions or share experiences - interaction is the goal</li>
-                <li><strong>Request Demonstrations:</strong> We have hardware here to show you how things work</li>
-                <li><strong>Share Your Story:</strong> Your experiences help everyone learn</li>
-                <li><strong>Challenge Ideas:</strong> Intellectual debate makes everyone smarter</li>
-            </ul>
-
-            <h3 class="bitcoin-orange">No Stupid Questions Policy</h3>
-            <p><strong>Beginner Questions Welcome:</strong> "What exactly is Bitcoin?", "How do I buy my first Bitcoin?", "What's a private key?"</p>
-            <p><strong>Advanced Questions Encouraged:</strong> "How do I optimize Lightning liquidity?", "What's the best multisig setup?", "How do I contribute to development?"</p>
-            <p><strong>Alaska-Specific Questions:</strong> "How do I protect hardware in extreme cold?", "What's the best internet for remote mining?"</p>
-
-            <h3 class="gold">Live Demonstrations Available</h3>
-            <p>Hardware wallets, Bitcoin node assembly, mining equipment, software tools, Lightning payments - we have actual hardware to demonstrate concepts hands-on.</p>
-
-            <div class="highlight-box">
-                <p class="bitcoin-orange"><strong>Community Knowledge:</strong> The person next to you might have the exact solution to your problem. We encourage peer-to-peer learning and knowledge sharing.</p>
-            </div>
-        `
-    },
-    {
-        id: 16,
+        id: 14,
         title: "Key Takeaways: Essential Principles for Your Bitcoin Journey",
         subtitle: "",
         theme: "",
@@ -403,7 +351,7 @@ const slideData = [
         `
     },
     {
-        id: 17,
+        id: 15,
         title: "Thank You!",
         subtitle: "Let's Keep the Conversation Going",
         theme: "",
@@ -435,7 +383,7 @@ const slideData = [
         `
     },
     {
-        id: 18,
+        id: 16,
         title: "Appendix A: Essential Resources & Reading List",
         subtitle: "Comprehensive Guide to Bitcoin Education Materials",
         theme: "appendix-theme",
@@ -483,7 +431,7 @@ const slideData = [
         `
     },
     {
-        id: 19,
+        id: 17,
         title: "Appendix B: Complete Hardware Guide",
         subtitle: "Detailed Specifications and Setup Instructions",
         theme: "appendix-theme",
@@ -536,7 +484,7 @@ const slideData = [
         `
     },
     {
-        id: 20,
+        id: 18,
         title: "Appendix C: Advanced Security Protocols",
         subtitle: "Comprehensive Security Framework for Bitcoin in Alaska",
         theme: "appendix-theme",
@@ -594,7 +542,7 @@ const slideData = [
         `
     },
     {
-        id: 21,
+        id: 19,
         title: "Appendix D: Alaska Bitcoin Opportunities",
         subtitle: "Comprehensive Analysis of Alaska's Unique Bitcoin Advantages",
         theme: "alaska-theme",
@@ -659,7 +607,7 @@ const slideData = [
         `
     },
     {
-        id: 22,
+        id: 20,
         title: "Appendix E: Technical Deep Dive",
         subtitle: "Advanced Bitcoin Technology and Implementation Details",
         theme: "appendix-theme",
@@ -720,8 +668,6 @@ const slideData = [
 
             <div class="highlight-box">
                 <p class="bitcoin-orange"><strong>Alaska Development Opportunities:</strong> Cold weather testing, satellite internet optimization, renewable energy integration, and remote connectivity improvements for Bitcoin Core.</p>
-
-
             </div>
         `
     }
@@ -730,21 +676,26 @@ const slideData = [
 // Function to load all slides dynamically
 function loadSlides() {
     const container = document.body;
-    
-    // Remove existing slides except the first one
-    const existingSlides = document.querySelectorAll('.slide:not(:first-child)');
+
+    // Remove all existing slides
+    const existingSlides = document.querySelectorAll('.slide');
     existingSlides.forEach(slide => slide.remove());
-    
-    // Add remaining slides
-    for (let i = 1; i < slideData.length; i++) {
+
+    // Add all slides from slideData
+    for (let i = 0; i < slideData.length; i++) {
         const slide = slideData[i];
         const slideElement = document.createElement('div');
         slideElement.className = `slide ${slide.theme}`;
-        
+
+        // Add 'active' class to first slide
+        if (i === 0) {
+            slideElement.classList.add('active');
+        }
+
         let titleElement = '';
         if (slide.title) {
             if (slide.title.includes('Bitcoin Alaska')) {
-                titleElement = `<h1>${slide.title}</h1>`;
+                titleElement = `<h1>${slide.title} <img src="assets/bitcoin-logo.png" alt="Bitcoin Logo" class="bitcoin-logo logo-title"></h1>`;
             } else {
                 titleElement = `<h2>${slide.title}</h2>`;
             }
